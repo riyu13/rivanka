@@ -1,0 +1,25 @@
+.text {
+    text-decoration-line: none;
+    color: darkslategrey;
+}
+
+/* File CSS Anda */
+/* Contoh menggunakan efek opacity */
+.page {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+}
+
+.remove-underline {
+  text-decoration: none;
+}

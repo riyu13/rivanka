@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.image-container {
+  position: relative;
+  width: 300px; /* Ganti ukuran sesuai kebutuhan */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Mengatur tata letak menjadi kolom */
+  align-items: center; /* Mengatur agar elemen berada di tengah horizontal */
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease; /* Transisi efek geser ke atas */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(100%); /* Menggeser elemen ke bawah dari layar */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transisi efek muncul */
+}
+
+.image-container:hover img {
+  transform: translateY(-50%); /* Menggeser gambar ke atas saat disentuh */
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Munculkan overlay saat disentuh */
+  transform: translateY(0); /* Geser overlay ke atas saat disentuh */
+}
+
+
+.text-container {
+  width: 300px; /* Ganti ukuran sesuai kebutuhan */
+  height: 200px; /* Ganti ukuran sesuai kebutuhan */
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.scrolling-text {
+  animation: scrollText 20s linear infinite; /* Animasi untuk menggulung teks */
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateY(0); /* Teks berada di posisi awal */
+  }
+  100% {
+    transform: translateY(-100%); /* Teks digulung ke atas sejauh 100% dari tinggi kontainer */
+  }
+}
+
+.image-card {
+  width: fit-content;
+}

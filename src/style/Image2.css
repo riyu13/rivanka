@@ -1,0 +1,23 @@
+.image2 {
+    width: auto;
+    height: 100vh;
+}
+/* App.css */
+.app2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: all 0.5s ease-in-out;
+}
+
+.box.visible {
+  transform: translateX(200px);
+}
